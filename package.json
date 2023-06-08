@@ -1,0 +1,28 @@
+{
+  "name": "playlist-gpt",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "build": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^10.0.1",
+    "dotenv": "^16.0.3",
+    "figlet": "^1.6.0",
+    "openai": "^3.2.1",
+    "spotify-web-api-node": "^5.0.2"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.6",
+    "@types/node": "^20.1.1",
+    "@types/spotify-web-api-node": "^5.0.7",
+    "typescript": "^5.0.4"
+  },
+  "bin": {
+    "playlist-gpt": "dist/index.js"
+  }
+}
