@@ -1,5 +1,6 @@
 import { Configuration, OpenAIApi } from "openai";
 import { BASIC_PROMPT } from "./consts";
+import {Playlist} from "./types";
 
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY
@@ -37,7 +38,7 @@ export async function getPlaylistObject(prompt: string): Promise<Object | undefi
     
 }
 
-export async function getPlaylistFakeObject(prompt: string): Promise<Object | undefined> {
+export async function getPlaylistFakeObject(prompt: string): Promise<Playlist | undefined> {
     let res = [
         {
           "Artist": "AC/DC",
@@ -61,7 +62,7 @@ export async function getPlaylistFakeObject(prompt: string): Promise<Object | un
         }
       ] as Object
 
-      return res
+      return res as Playlist
 
 
 }
